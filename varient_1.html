@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kinderpedia — Coming Soon</title>
   <style>
-    :root{
+    :root {
       --bg: #000000;
       --fg: #ffffff;
       --muted: #d1cfcf;
@@ -14,39 +15,41 @@
     }
 
     /* Page layout */
-    html,body{
-      height:100%;
-      margin:0;
-      background:var(--bg);
-      color:var(--muted);
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      background: var(--bg);
+      color: var(--muted);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     .page {
-      min-height:100%;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       padding: calc(var(--gutter) * 2);
-      box-sizing:border-box;
-      text-align:center;
+      box-sizing: border-box;
+      text-align: center;
     }
 
     .card {
-      width:100%;
+      width: 100%;
       max-width: var(--max-width);
       padding: 28px;
-      box-sizing:border-box;
+      box-sizing: border-box;
     }
 
     /* Logo placeholder (top, centered) */
     .logo {
-      display:block;
+      display: block;
       margin: 0 auto 20px;
-      width: 180px;             /* ideal displayed width on desktop */
+      width: 180px;
+      /* ideal displayed width on desktop */
       height: auto;
       max-height: 90px;
       object-fit: contain;
@@ -58,22 +61,22 @@
       width: 180px;
       height: 64px;
       margin: 0 auto 20px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:8px;
-      background: rgba(255,255,255,0.03);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
       color: var(--muted);
-      font-weight:600;
-      letter-spacing:0.6px;
-      font-size:0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      font-size: 0.95rem;
     }
 
     h1 {
       color: var(--fg);
       font-size: clamp(1.6rem, 2.5vw, 2.4rem);
       margin: 8px 0 14px;
-      line-height:1.05;
+      line-height: 1.05;
     }
 
     /* Justified centralised body text */
@@ -81,134 +84,154 @@
       color: var(--fg);
       font-size: 1.02rem;
       line-height: 1.6;
-      text-align: justify;          /* ← JUSTIFIED */
+      text-align: justify;
+      /* ← JUSTIFIED */
       margin: 0 auto 22px;
-      max-width: 66ch;              /* keep readable line length */
+      max-width: 66ch;
+      /* keep readable line length */
     }
 
     .small {
       color: var(--muted);
-      margin-top:18px;
-      font-size:0.9rem;
-      opacity:0.9;
-      text-align:center;
+      margin-top: 18px;
+      font-size: 0.9rem;
+      opacity: 0.9;
+      text-align: center;
     }
 
     /* Responsive YouTube embed */
     .video-wrap {
       position: relative;
       width: 100%;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-bottom: 56.25%;
+      /* 16:9 aspect ratio */
       margin-top: 18px;
       border-radius: 8px;
       overflow: hidden;
-      background: rgba(255,255,255,0.02);
+      background: rgba(255, 255, 255, 0.02);
     }
+
     .video-wrap iframe {
-      position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      border:0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     /* small tweak for very small screens */
     @media (max-width:420px) {
-      .logo, .logo-placeholder { width: 140px; }
-      .card { padding:16px; }
-      .lead { font-size:0.98rem; }
-      h1 { font-size:1.4rem; }
+
+      .logo,
+      .logo-placeholder {
+        width: 140px;
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+      .lead {
+        font-size: 0.98rem;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
     }
 
     /* larger screens */
     @media (min-width:900px) {
-      .card { padding:36px; }
-      .logo { width: 210px; }
+      .card {
+        padding: 36px;
+      }
+
+      .logo {
+        width: 210px;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <div class="card">
 
-      <!--
-        LOGO:
-        Option A (same folder): save logo as "logo.png" next to this HTML file:
-        <img src="logo.png" alt="Kinderpedia logo" class="logo">
-
-        Option B (assets folder): save at assets/logo.png:
-        <img src="assets/logo.png" alt="Kinderpedia logo" class="logo">
-
-        If you don't have the file yet, the placeholder below will show instead.
-      -->
-
-      <!-- Placeholder shown until you add a real image file -->
-      <div class="logo-placeholder" aria-hidden="true">Logo placeholder</div>
-
-      <!-- Example of real logo usage (comment out placeholder & uncomment the img when you add the file) -->
-      <!-- <img src="logo.png" alt="Kinderpedia logo" class="logo"> -->
+      <img src="logo.png" alt="Kinderpedia logo" class="logo">
 
       <h1>Our Website is Coming Soon</h1>
 
-      <!-- Justified centralised body text with lorem ipsum -->
-      <p class="lead">
-        Preschool children are like little Aliens!
+      <div class="lead">
+        <p>It’s hard to be a <br>Preschool Teacher!</p>
 
-        New to our planet & in need to be taught the ABCDs of life here !
-        
-        But how do we explain to little minds, 
-        using little words they know, the following...
-        
-        Our languages, the meaning of 100s of words ?
-        Our systems to quantify and calculate ?
-        What colours, shapes, seasons, verbs  & words  are ?
-        Introduce our animals, birds, mountains & seas in all their glory?
+        <p>Try explaining to little minds, using little words they know, the following :-</p>
 
-        It gets even more complex when the medium of instruction is English, 
-        a language most kids do not know!  It gets more acute when kids are from different linguistic back grounds !!
+        <ul>
+          <li>What languages are, and the meaning of 100s of words</li>
+          <li>What our systems to quantify and calculate are</li>
+          <li>What are colours, shapes, seasons, verbs &amp; words ?</li>
+          <li>And when the medium of instruction is English , a language most kids do not speak at home ??</li>
+          <li>It gets more acute when kids are from different linguistic back grounds as in cities world wide !!</li>
+        </ul>
 
-        Preschool teachers must have prayed hard for :-
-        
-        A single magic means to get their attention  
-        With no words , given their limited vocabulary
-        A means to teach them quickly & effortlessly
+        <p>Preschool Teachers must <br>have prayed really hard for ...</p>
+        <ul>
+          <li>A single magic means to get the rapt attention of kids</li>
+          <li>A language without words that all the kids could understand <br>(given their very limited verbal
+            vocabulary )</li>
+          <li>A means to teach kids conceptually, quickly &amp; effortlessly</li>
+        </ul>
 
-        KinderPedia uses the language of animations and curated videos, 
-        instantly getting the attention of preschool kids when delivered as touch screen Apps that most schools use these days 
-        It uses a GUI (Graphic User Interface) & UX (User eXperience) designed to work on the curiocity of kids without the use of words! 
-        
-        It cuts across their linguistic differences using multmedia formats that combine 
-        audio, video, animations, graphics, bright colours to deliver the bulk of preschool 
-        content in a manner that is hard for kids to ignore 
+        <p style="text-align: center;">And God said , let there be ...</p>
+        <!-- Image Placeholder -->
 
-        Over 35 + apps that make teaching preschool children as easy an 123!
-        Apps that teach children quickly by enablilng them to comprehend concepts 
-        behind what they learn in depth! Avoiding learning by rote.
-        
-        It can all be accessed merely by touching graphic icons – 
-        no keyboards & those strange symbols on them called letters needed!  
+        <ul>
+          <li>KinderPedia uses the language of animations and curated videos, instantly getting the attention of
+            preschool kids when delivered as touch screen Apps that most schools use these days</li>
+          <li>It uses a GUI (Graphic User Interface) &amp; UX (User eXperience) designed to work on the curiocity of
+            kids without the use of words!</li>
+        </ul>
 
-        
-        Its a format children are familiar with well before they 
-        come to preschools, thanks to cartoon network, discovery kids, 
-        tablets & smart phones at home
+        <!-- Image Placeholder -->
 
-        
-        Professionals working in Multimedia harnessing AI powered tools to create animations, create and edit images, audio & videos
-        Makers of Apps for large Touch Interactive flat panels and Tablets meant specifically for Preschool children world wide
-        
-        Fortunately for us today, we have ways to communicate clearly to these little people. 
-        In a manner they understand well, regardless of their vocabulary & linguistic backgrounds. 
+        <ul>
+          <li>It cuts across their linguistic differences using multmedia formats that combine audio, video, animations,
+            graphics, bright colours to deliver the bulk of preschool content in a manner that is hard for kids to
+            ignore</li>
+        </ul>
 
-      </p>
+        <!-- Image Placeholder -->
+
+        <ul>
+          <li>Over 35 + apps that make teaching preschool children as easy an 123!</li>
+          <li>Apps that teach children quickly by enablilng them to comprehend concepts behind what they learn in depth!
+            Avoiding learning by rote.</li>
+          <li>It can all be accessed merely by touching graphic icons – no keyboards &amp; those strange symbols on them
+            called letters needed!</li>
+        </ul>
+
+        <!-- Image Placeholder -->
+
+        <ul>
+          <li>Its a format children are familiar with well before they come to preschools, thanks to cartoon network,
+            discovery kids, tablets &amp; smart phones at home</li>
+        </ul>
+
+        <!-- Image Placeholder -->
+
+        <p>Professionals working in Multimedia harnessing AI powered tools to create animations, create and edit images,
+          audio &amp; videos<br>
+          Makers of Apps for large Touch Interactive flat panels and Tablets meant specifically for Preschool children
+          world wide</p>
+
+        <p>Fortunately for us today, we have ways to communicate clearly to these little people. In a manner they
+          understand well, regardless of their vocabulary &amp; linguistic backgrounds.</p>
+      </div>
 
       <!-- Responsive YouTube embed -->
       <div class="video-wrap" aria-label="Intro video">
-        <iframe
-          src="https://www.youtube.com/embed/wDchsz8nmbo"
-          title="YouTube video player"
-          frameborder="0"
+        <iframe src="https://www.youtube.com/embed/wDchsz8nmbo" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
@@ -218,4 +241,5 @@
     </div>
   </div>
 </body>
+
 </html>
