@@ -48,10 +48,9 @@
     .logo {
       display: block;
       margin: 0 auto 20px;
-      width: 180px;
-      /* ideal displayed width on desktop */
+      width: 540px;
+      max-width: 100%;
       height: auto;
-      max-height: 90px;
       object-fit: contain;
       filter: none;
     }
@@ -123,7 +122,6 @@
     /* small tweak for very small screens */
     @media (max-width:420px) {
 
-      .logo,
       .logo-placeholder {
         width: 140px;
       }
@@ -147,9 +145,7 @@
         padding: 36px;
       }
 
-      .logo {
-        width: 210px;
-      }
+
     }
   </style>
 </head>
@@ -200,7 +196,6 @@
           <li>A means to teach kids conceptually, quickly &amp; effortlessly</li>
         </ul>
 
-        <p style="text-align: center;">And God said , let there be ...</p>
         <!-- Image Placeholder -->
 
         <ul>
