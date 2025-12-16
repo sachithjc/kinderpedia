@@ -22,7 +22,15 @@
             margin: 0;
             background: var(--bg);
             color: var(--muted);
-            font-family: "Bahnschrift", sans-serif;
+            font-family:
+                Bahnschrift,
+                "Segoe UI Variable",
+                "Segoe UI",
+                -apple-system,
+                BlinkMacSystemFont,
+                Roboto,
+                Arial,
+                sans-serif;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -59,25 +67,26 @@
             line-height: 1.1;
         }
 
-        /* ===== TEXT FIXES ===== */
         .lead {
             color: var(--fg);
-            font-size: clamp(0.95rem, 2.5vw, 1.05rem);
-            line-height: 1.65;
+            font-size: 1rem;
+            /* base size */
+            line-height: 1.4;
+            /* tighter */
             max-width: 65ch;
             margin: 0 auto;
             text-align: justify;
             text-justify: inter-word;
         }
 
+
         .lead p {
             margin-bottom: 1em;
         }
 
         .lead ul {
-            margin: 1em 0;
-            padding-left: 1.2em;
-            text-align: left;
+            font-size: 0.95em;
+            line-height: 1.35;
         }
 
         .lead li {
@@ -88,12 +97,16 @@
         .video-wrap {
             position: relative;
             width: 100%;
+            max-width: 65ch;
+            /* 👈 match text column */
+            margin: 24px auto;
+            /* center it */
             padding-bottom: 56.25%;
-            margin: 24px 0;
             border-radius: 8px;
             overflow: hidden;
             background: rgba(255, 255, 255, 0.02);
         }
+
 
         .video-wrap iframe {
             position: absolute;
@@ -115,11 +128,16 @@
         /* ===== MOBILE FIX ===== */
         @media (max-width: 600px) {
             .lead {
+                font-size: 0.9rem;
+                /* 👈 THIS fixes the “zoomed” look */
+                line-height: 1.35;
                 text-align: left;
+                max-width: 100%;
+                /* allow longer lines on mobile */
             }
 
-            h1 {
-                font-size: 1.4rem;
+            .lead ul {
+                font-size: 0.9em;
             }
         }
     </style>
