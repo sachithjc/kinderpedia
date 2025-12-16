@@ -5,23 +5,32 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kinderpedia</title>
+
   <style>
     :root {
       --bg: #000000;
       --fg: #ffffff;
+      --hg: #ebca38;
       --muted: #d1cfcf;
       --max-width: 760px;
       --gutter: 10px;
     }
 
-    /* Page layout */
     html,
     body {
       height: 100%;
       margin: 0;
       background: var(--bg);
       color: var(--muted);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-family:
+        Bahnschrift,
+        "Segoe UI Variable",
+        "Segoe UI",
+        -apple-system,
+        BlinkMacSystemFont,
+        Roboto,
+        Arial,
+        sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -32,7 +41,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: calc(var(--gutter));
+      padding: var(--gutter);
       box-sizing: border-box;
       text-align: center;
     }
@@ -40,126 +49,113 @@
     .card {
       width: 100%;
       max-width: var(--max-width);
-      padding: 0px;
       box-sizing: border-box;
     }
 
-    /* Logo placeholder (top, centered) */
     .logo {
       display: block;
       margin: 0 auto 20px;
       width: 540px;
       max-width: 100%;
       height: auto;
-      object-fit: contain;
-      filter: none;
-    }
-
-    /* If you don't have an image yet, show a subtle placeholder */
-    .logo-placeholder {
-      width: 180px;
-      height: 64px;
-      margin: 0 auto 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--muted);
-      font-weight: 600;
-      letter-spacing: 0.6px;
-      font-size: 0.95rem;
     }
 
     h1 {
-      color: var(--fg);
-      font-size: clamp(1.6rem, 2.5vw, 2.4rem);
-      margin: 8px 0 14px;
-      line-height: 1.05;
+      color: var(--hg);
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+      margin: 16px 0 14px;
+      line-height: 1.1;
     }
 
-    /* Justified centralised body text */
     .lead {
       color: var(--fg);
-      font-size: 1.02rem;
-      line-height: 1.6;
+      font-size: 1rem;
+      /* base size */
+      line-height: 1.4;
+      /* tighter */
+      max-width: 65ch;
+      margin: 0 auto;
       text-align: justify;
-      /* ← JUSTIFIED */
-      margin: 0 auto 22px;
-      margin-top: 0px;
-      margin-right: 0px;
-      margin-bottom: 0px;
-      margin-left: 0px;
+      text-justify: inter-word;
     }
 
-    .small {
-      color: var(--muted);
-      margin-top: 18px;
-      font-size: 0.9rem;
-      opacity: 0.9;
-      text-align: center;
+
+    .lead p {
+      margin-bottom: 1em;
+    }
+
+    .lead ul {
+      font-size: 0.95em;
+      line-height: 1.35;
+    }
+
+    .lead li {
+      margin-bottom: 0.4em;
     }
 
     /* Responsive YouTube embed */
     .video-wrap {
       position: relative;
       width: 100%;
+      max-width: 65ch;
+      /* 👈 match text column */
+      margin: 24px auto;
+      /* center it */
       padding-bottom: 56.25%;
-      /* 16:9 aspect ratio */
-      margin-top: 18px;
       border-radius: 8px;
       overflow: hidden;
       background: rgba(255, 255, 255, 0.02);
     }
 
+
     .video-wrap iframe {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       border: 0;
     }
 
-    /* small tweak for very small screens */
-    @media (max-width:420px) {
-      .page {
-        padding: 10px;
-      }
-
-      .logo-placeholder {
-        width: 140px;
-      }
-
-      .card {
-        padding: 16px;
-      }
-
-      .lead {
-        font-size: 0.98rem;
-      }
-
-      h1 {
-        font-size: 1.4rem;
-      }
-    }
-
-    /* larger screens */
-    @media (min-width:900px) {
-      .card {
-        padding: 0px;
-      }
-
-
-    }
-
     .content-img {
       display: block;
-      margin: 24px auto;
+      margin: 28px auto;
       max-width: 100%;
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===== MOBILE FIX ===== */
+    @media (max-width: 600px) {
+      .lead {
+        font-size: 0.82rem;
+        /* 👈 main lever (this is the big one) */
+        line-height: 1.28;
+        /* 👈 tighter vertical rhythm */
+        text-align: left;
+        max-width: 100%;
+        /* 👈 longer lines = more words */
+      }
+
+      .lead ul {
+        padding-left: 0.9em;
+        font-size: 0.9em;
+      }
+
+      h1 {
+        font-size: 1.15rem;
+        line-height: 1.2;
+      }
+    }
+
+    .youtube-icon {
+      display: block;
+      margin: 0 auto;
+      width: 120px;
+      /* desktop default */
+      max-width: 40%;
+      /* safety on very small screens */
+      height: auto;
     }
   </style>
 </head>
@@ -169,100 +165,106 @@
     <div class="card">
 
       <img src="logo.png" alt="Kinderpedia logo" class="logo">
-      <div class="lead">
-        <p>Kinderpedia is a multimedia-based teaching aid - a learning platform designed to make preschool teaching
-          simpler, more engaging, and truly universal.
-          It helps teachers explain complex early-learning concepts—language, numbers, shapes, colours, seasons,
-          actions, and more—to KG children using limited vocabulary
-          and may come from diverse linguistic backgrounds. Using animations, curated videos, audio, graphics, and
-          bright visuals delivered through intuitive touch-screen apps,
-          Kinderpedia captures children’s attention instantly and teaches them conceptually rather than through rote
-          learning.
-          With over 35 thoughtfully designed apps, it enables children to understand ideas deeply—without relying on
-          words,
-          keyboards, or prior language skills—using a format they are already familiar with from cartoons, tablets, and
-          smartphones.
-          Kinderpedia bridges language gaps and transforms how preschoolers learn, making education natural, effortless,
-          and joyful for both teachers and children.</p>
 
+      <div class="lead">
+        <p>
+          Kinderpedia is a multimedia-based teaching aid — a learning platform designed to make preschool
+          teaching
+          simpler, more engaging, and truly universal.
+          It helps teachers explain complex early-learning concepts—language, numbers, shapes, colours,
+          seasons,
+          actions, and more—to KG children using limited vocabulary
+          and from diverse linguistic backgrounds.
+        </p>
+
+        <p>
+          Using animations, curated videos, audio, graphics, and bright visuals delivered through intuitive
+          touch-screen apps, Kinderpedia captures children’s attention instantly and teaches them conceptually
+          rather
+          than through rote learning.
+        </p>
+
+        <p>
+          With over 35 thoughtfully designed apps, it enables children to understand ideas deeply—without
+          relying on
+          words, keyboards, or prior language skills—using a format they are already familiar with from
+          cartoons,
+          tablets, and smartphones.
+        </p>
+
+        <p>
+          Kinderpedia bridges language gaps and transforms how preschoolers learn, making education natural,
+          effortless, and joyful for both teachers and children.
+        </p>
       </div>
 
-
-      <!-- Responsive YouTube embed -->
       <div class="video-wrap" aria-label="Intro video">
-        <iframe width="1346" height="771" src="https://www.youtube.com/embed/DfaksBvvKWA" title="Kinderpedia"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/DfaksBvvKWA" title="Kinderpedia" allowfullscreen></iframe>
       </div>
 
       <div class="lead">
         <h1>Why use Kinderpedia?</h1>
 
-        <p>It’s hard to be a Preschool Teacher! Without creative teaching aids, it can be difficult to explain complex
-          early-learning concepts to children who have not yet grasped how to communicate in any language,
-          let alone, in English - a language that most children do not speak at home! </p>
+        <p>
+          It’s hard to be a Preschool Teacher! Without creative teaching aids, it can be difficult to explain
+          complex
+          early-learning concepts to children who have not yet grasped how to communicate in any language —
+          let alone English.
+        </p>
 
-        <p> Concepts like... </p>
-
-        <ul>
-          <li>languages, the meaning of 100s of words,</li>
-          <li>quantifing and calculating,</li>
-          <li>colours, shapes, seasons, verbs &amp; words etc.</li>
-        </ul>
-
-        <p>...are all likely to be difficult, without the help of teaching aids.</p>
-
-        <p>What we provide...</p>
-        <ul>
-          <li>A single magic means to get the rapt attention of kids</li>
-          <li>A language without words that all the kids could understand <br>(given their very limited verbal
-            vocabulary )</li>
-          <li>A means to teach kids conceptually, quickly &amp; effortlessly</li>
-        </ul>
-
-        <img src="image5.png" alt="Kinderpedia Animation" class="content-img">
+        <p>Concepts like…</p>
 
         <ul>
-          <li>KinderPedia uses the language of animations and curated videos, instantly getting the attention of
-            preschool kids when delivered as touch screen Apps that most schools use these days</li>
-          <li>It uses a GUI (Graphic User Interface) &amp; UX (User eXperience) designed to work on the curiocity of
-            kids without the use of words!</li>
+          <li>Languages and the meaning of hundreds of words</li>
+          <li>Quantifying and calculating</li>
+          <li>Colours, shapes, seasons, verbs &amp; words</li>
         </ul>
 
-        <img src="image6.png" alt="GUI and UX" class="content-img">
+        <p>…are all difficult without the right teaching aids.</p>
+
+        <p>What we provide:</p>
 
         <ul>
-          <li>It cuts across their linguistic differences using multmedia formats that combine audio, video, animations,
-            graphics, bright colours to deliver the bulk of preschool content in a manner that is hard for kids to
-            ignore</li>
+          <li>A single magical way to capture children’s attention</li>
+          <li>A language without words that all children understand</li>
+          <li>A way to teach conceptually, quickly, and effortlessly</li>
         </ul>
 
-        <img src="image7.png" alt="Multimedia Content" class="content-img">
+        <img src="image5.png" class="content-img" alt="Kinderpedia Animation">
 
         <ul>
-          <li>Over 35 + apps that make teaching preschool children as easy an 123!</li>
-          <li>Apps that teach children quickly by enablilng them to comprehend concepts behind what they learn in depth!
-            Avoiding learning by rote.</li>
-          <li>It can all be accessed merely by touching graphic icons – no keyboards &amp; those strange symbols on them
-            called letters needed!</li>
+          <li>Animations and curated videos designed for touch-screen learning</li>
+          <li>GUI &amp; UX crafted specifically for preschool curiosity</li>
         </ul>
 
-        <img src="image8.png" alt="Teaching Apps" class="content-img">
+        <img src="image6.png" class="content-img" alt="GUI and UX">
 
         <ul>
-          <li>Its a format children are familiar with well before they come to preschools, thanks to cartoon network,
-            discovery kids, tablets &amp; smart phones at home</li>
+          <li>Multimedia content that cuts across linguistic differences</li>
         </ul>
 
-        <p>Professionals working in Multimedia harnessing AI powered tools to create animations, create and edit images,
-          audio &amp; videos<br>
-          Makers of Apps for large Touch Interactive flat panels and Tablets meant specifically for Preschool children
-          world wide</p>
+        <img src="image7.png" class="content-img" alt="Multimedia Content">
 
-        <p>Fortunately for us today, we have ways to communicate clearly to these little people. In a manner they
-          understand well, regardless of their vocabulary &amp; linguistic backgrounds.</p>
+        <ul>
+          <li>35+ apps that make teaching as easy as 1-2-3</li>
+          <li>Deep understanding — not rote memorisation</li>
+          <li>No keyboards. No letters. Just intuitive interaction</li>
+        </ul>
+
+        <p>
+          Kinderpedia uses a format children already love — cartoons, tablets, and smart devices — long before
+          they
+          enter preschool.
+        </p>
       </div>
+
+      <div style="text-align: center; margin: 40px 0;">
+        <h2 style="color: var(--hg); margin-bottom: 20px;">Demo Video</h2>
+        <a href="https://www.youtube.com/watch?v=DfaksBvvKWA" target="_blank">
+          <img src="youtube.png" alt="Demo Video" class="youtube-icon">
+        </a>
+      </div>
+
     </div>
   </div>
 </body>
