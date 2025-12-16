@@ -128,17 +128,23 @@
         /* ===== MOBILE FIX ===== */
         @media (max-width: 600px) {
             .lead {
-                font-size: 0.9rem;
-                /* 👈 THIS fixes the “zoomed” look */
-                line-height: 1.35;
+                font-size: 0.82rem;
+                /* 👈 main lever (this is the big one) */
+                line-height: 1.28;
+                /* 👈 tighter vertical rhythm */
                 text-align: left;
                 max-width: 100%;
-                /* allow longer lines on mobile */
+                /* 👈 longer lines = more words */
             }
 
             .lead ul {
                 padding-left: 0.9em;
                 font-size: 0.9em;
+            }
+
+            h1 {
+                font-size: 1.15rem;
+                line-height: 1.2;
             }
         }
     </style>
