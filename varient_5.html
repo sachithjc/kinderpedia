@@ -38,10 +38,6 @@
             text-align: center;
         }
 
-        section {
-            text-align: left;
-        }
-
         .card {
             width: 100%;
             max-width: var(--max-width);
@@ -121,6 +117,33 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
+        .lead h2 {
+            color: var(--hg);
+            font-size: 1.25rem;
+            margin: 2em 0 0.6em;
+            text-align: center;
+        }
+
+        .lead h3.highlight {
+            color: var(--hg);
+            font-size: 1.15rem;
+            margin: 2em 0 0.6em;
+            text-align: center;
+        }
+
+        .lead blockquote {
+            margin: 1.5em 0;
+            padding: 1em 1.2em;
+            border-left: 3px solid var(--hg);
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .sources-title {
+            color: var(--hg);
+            font-weight: bold;
+            margin-top: 2em;
+        }
+
         /* ===== MOBILE FIX ===== */
         @media (max-width: 600px) {
             .lead {
@@ -152,108 +175,6 @@
             max-width: 40%;
             /* safety on very small screens */
             height: auto;
-        }
-
-        .app-list {
-            max-width: 760px;
-            margin: 40px auto;
-        }
-
-        .app-list h2 {
-            color: #ebca38;
-            /* yellow headings */
-            font-size: 1.4rem;
-            margin: 32px 0 12px;
-        }
-
-        .app-list .count {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            font-weight: normal;
-        }
-
-        .app-list ul {
-            list-style-type: disc;
-            padding-left: 22px;
-            margin: 0;
-        }
-
-        .app-list li {
-            color: #ffffff;
-            /* white list text */
-            line-height: 1.6;
-            margin-bottom: 6px;
-        }
-
-        .results-section {
-            max-width: 760px;
-            margin: 60px auto;
-        }
-
-        .results-section .highlight {
-            color: #ebca38;
-            /* yellow highlight */
-            font-size: 1.3rem;
-            margin: 28px 0 14px;
-            text-align: center;
-        }
-
-        .results-list {
-            list-style: disc;
-            padding-left: 22px;
-            margin: 0 0 24px;
-        }
-
-        .results-list li {
-            color: #ffffff;
-            line-height: 1.6;
-            margin-bottom: 6px;
-        }
-
-        .body-text {
-            color: #ffffff;
-            line-height: 1.6;
-            margin-bottom: 22px;
-            text-align: justify;
-        }
-
-        .ai-quote {
-            margin: 0;
-            padding: 20px 24px;
-            border-left: 3px solid #ebca38;
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .ai-quote p {
-            color: #ffffff;
-            margin-top: 0;
-        }
-
-        .ai-quote ul {
-            padding-left: 20px;
-            margin-bottom: 0;
-        }
-
-        .ai-quote li {
-            color: #ffffff;
-            line-height: 1.6;
-            margin-bottom: 8px;
-        }
-
-        .neuroscience-section {
-            max-width: 760px;
-            margin: 60px auto;
-        }
-
-        .neuro-list {
-            list-style: disc;
-            padding-left: 22px;
-        }
-
-        .neuro-list li {
-            color: #ffffff;
-            line-height: 1.6;
-            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -348,10 +269,6 @@
                     yourself >>>
                 </p>
 
-            </div>
-
-            <section class="app-list">
-
                 <h2>Mathematics <span class="count">(10 apps)</span></h2>
                 <ul>
                     <li>Concepts in Math (big / small, long / short)</li>
@@ -402,10 +319,6 @@
                     <li>Technology & science</li>
                 </ul>
 
-            </section>
-
-            <section class="results-section">
-
                 <h3 class="highlight">When 35+ vibrant apps are used, expect substantial results!</h3>
 
                 <ul class="results-list">
@@ -446,10 +359,6 @@
                         </li>
                     </ul>
                 </blockquote>
-
-            </section>
-
-            <section class="research-section">
 
                 <h3 class="highlight">What Research Says About Play & Early Learning</h3>
 
@@ -532,66 +441,8 @@
                     </li>
                 </ul>
 
-            </section>
-
-            <div class="lead">
-                <h1>Why use Kinderpedia?</h1>
-
-                <p>
-                    It’s hard to be a Preschool Teacher! Without creative teaching aids, it can be difficult to explain
-                    complex
-                    early-learning concepts to children who have not yet grasped how to communicate in any language —
-                    let alone English.
-                </p>
-
-                <p>Concepts like…</p>
-
-                <ul>
-                    <li>Languages and the meaning of hundreds of words</li>
-                    <li>Quantifying and calculating</li>
-                    <li>Colours, shapes, seasons, verbs &amp; words</li>
-                </ul>
-
-                <p>…are all difficult without the right teaching aids.</p>
-
-                <p>What we provide:</p>
-
-                <ul>
-                    <li>A single magical way to capture children’s attention</li>
-                    <li>A language without words that all children understand</li>
-                    <li>A way to teach conceptually, quickly, and effortlessly</li>
-                </ul>
-
-                <img src="image5.png" class="content-img" alt="Kinderpedia Animation">
-
-                <ul>
-                    <li>Animations and curated videos designed for touch-screen learning</li>
-                    <li>GUI &amp; UX crafted specifically for preschool curiosity</li>
-                </ul>
-
-                <img src="image6.png" class="content-img" alt="GUI and UX">
-
-                <ul>
-                    <li>Multimedia content that cuts across linguistic differences</li>
-                </ul>
-
-                <img src="image7.png" class="content-img" alt="Multimedia Content">
-
-                <ul>
-                    <li>35+ apps that make teaching as easy as 1-2-3</li>
-                    <li>Deep understanding — not rote memorisation</li>
-                    <li>No keyboards. No letters. Just intuitive interaction</li>
-                </ul>
-
-                <p>
-                    Kinderpedia uses a format children already love — cartoons, tablets, and smart devices — long before
-                    they
-                    enter preschool.
-                </p>
             </div>
-
         </div>
-    </div>
 </body>
 
 </html>
