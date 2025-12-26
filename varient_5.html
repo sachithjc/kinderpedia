@@ -164,6 +164,33 @@
             /* safety on very small screens */
             height: auto;
         }
+
+        .nav-footer {
+            margin: 60px 0 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: transparent;
+            border: 2px solid var(--hg);
+            color: var(--hg);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--hg);
+            color: var(--bg);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 
@@ -421,6 +448,12 @@
                             Development</a>
                     </li>
                 </ul>
+
+                <nav class="nav-footer">
+                    <a href="gallery.html" class="btn">Gallery</a>
+                    <a href="contact.html" class="btn">Contact Us</a>
+                    <a href="about.html" class="btn">About Us</a>
+                </nav>
 
             </div>
         </div>
