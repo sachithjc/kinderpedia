@@ -153,12 +153,17 @@
 
 /* Mobile: stop floating */
 @media (max-width: 600px) {
-    .inline-embellish,
-    .inline-embellish.right {
-        float: none;
-        display: block;
-        margin: 16px auto;
+
+    .inline-embellish {
+        float: right;              /* KEEP float */
+        margin: 6px 0 12px 12px;    /* space between image & text */
     }
+
+    .inline-embellish_left {
+        float: left;               /* KEEP float */
+        margin: 6px 12px 6px 0;
+    }
+
 }
 
         /* ===== MOBILE FIX ===== */
