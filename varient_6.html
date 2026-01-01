@@ -130,6 +130,28 @@
             font-weight: bold;
             margin-top: 2em;
         }
+        .inline-embellish {
+    width: 70px;
+    height: auto;
+    margin: 6px 14px 6px 0;
+    float: left;
+    opacity: 0.85;
+}
+
+.inline-embellish.right {
+    float: right;
+    margin: 6px 0 6px 14px;
+}
+
+/* Mobile: stop floating */
+@media (max-width: 600px) {
+    .inline-embellish,
+    .inline-embellish.right {
+        float: none;
+        display: block;
+        margin: 16px auto;
+    }
+}
 
         /* ===== MOBILE FIX ===== */
         @media (max-width: 600px) {
@@ -201,6 +223,7 @@
 
             <div class="lead">
                 <p>
+                    <img src="ladybug.png" class="inline-embellish" alt="">
                     “English medium” Preschools here do a
                     remarkable job teaching children who do not
                     speak English at home. But, it’s an uphill
