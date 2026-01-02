@@ -60,7 +60,7 @@
             /* tighter */
             max-width: 65ch;
             margin: 0 auto;
-            text-align: justify;
+            text-align: left;
             text-justify: inter-word;
             font-weight: bold;
         }
@@ -135,7 +135,7 @@
         .inline-embellish {
             width: 70px;
             height: auto;
-            margin: 10px 0px 10px 10px;
+            margin: 0px 0px 10px 10px;
             float: right;
             opacity: 0.85;
         }
@@ -143,7 +143,7 @@
         .inline-embellish_left {
             width: 70px;
             height: auto;
-            margin: 10px 10px 10px 0;
+            margin: 0px 10px 10px 0;
             float: left;
             opacity: 0.85;
         }
@@ -151,6 +151,18 @@
         .inline-embellish.right {
             float: right;
             margin: 6px 0 6px 6px;
+        }
+
+        .inline-citation {
+            color: var(--fg);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            font-weight: normal;
+        }
+
+        .inline-citation:hover {
+            opacity: 0.75;
         }
 
         /* Mobile: stop floating */
@@ -241,32 +253,44 @@
 
             <div class="lead">
                 <p>
-                    “English-medium” preschools often do an admirable job teaching children who do not speak English at
-                    home. However, this remains a challenging task and can lead to certain learning gaps:
+                    “English medium” Preschools here do a
+                    remarkable job teaching children who do not
+                    speak English at home. But, it’s an uphill
+                    task, with its issues as an AI analysis lists:-
 
                 </p>
 
                 <ul>
-                    <li>Children may struggle to fully grasp core concepts, creating weak foundations
-                    </li>
-                    <li>Limited understanding can lead to rote learning, where memorisation replaces true
-                        comprehension</li>
-                    <li>Some children may find it difficult to express their thoughts and ideas, affecting confidence
-                        and self-expression</li>
+                    <li> Kids may not grasp core concepts
+                        well, causing foundational voids</li>
+                    <li>Poor grasps may lead to study by
+                        rote, an unhealthy approach to
+                        education,memorizing without much
+                        understanding</li>
+                    <li>Children may struggle to convey
+                        their thoughts & ideas, affecting self
+                        expression & confidence,</li>
                 </ul>
                 <p>
 
                     But, we at KinderPedia have a solution!
 
                 </p>
+                <!-- Responsive YouTube embed -->
+                <div class="video-wrap" aria-label="Intro video">
+                    <iframe width="1346" height="771" src="https://www.youtube.com/embed/DfaksBvvKWA"
+                        title="Kinderpedia" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
-                <img src="image5.png" class="content-img" alt="Kinderpedia Animation">
                 <img src="apple.jpeg" class="inline-embellish_left" alt="">
 
                 <p>
                     Using animations, curated videos, audio, graphics, and bright visuals delivered through intuitive
                     touch-screen apps, Kinderpedia captures children’s attention instantly and teaches them conceptually
-                    rather than through rote learning.
+                    rather
+                    than through rote learning.
                 </p>
                 <img src="ladybug.jpeg" class="inline-embellish" alt="">
 
@@ -277,7 +301,7 @@
                     words, numbers, etc., without any verbal
                     commentary, enabling kids from every
                     linguistic background to grasp &
-                    comprehend matters very well!
+                    comprehend matters very well !
                 </p>
                 <img src="butterfly.jpeg" class="inline-embellish_left" alt="">
 
@@ -293,7 +317,7 @@
 
                 <p>Colourful Graphic User Interface (GUI) of
                     our apps give the feel of digital games
-                    that kids love - making every lesson
+                    that kids love . . . making every lesson
                     a game to play !</p>
 
                 <img src="image6.png" class="content-img" alt="GUI and UX">
@@ -393,7 +417,6 @@
 
                 <img src="image8.png" class="content-img" alt="MultimediContent">
 
-
                 <p class="body-text">
                     We’ve used AI thoughtfully and responsibly — from AI-generated voices that ensure
                     correct pronunciation, to AI-assisted creation of images, animations, and videos.
@@ -421,70 +444,60 @@
                         learning is fun, visual, and engaging.
                     </li>
                 </ul>
+                <img src="image5.png" class="content-img" alt="Kinderpedia Animation">
 
                 <h2>What Research Says About Play & Early Learning</h2>
 
                 <p class="body-text">
-                    A large body of research shows that play-based and interactive learning supports early brain
-                    development,
-                    strengthens cognitive skills, and makes learning meaningful and engaging for young children. Below
-                    are key
-                    findings from peer-reviewed research and expert-led studies:
+                    A substantial body of research shows that play-based and interactive learning supports early brain
+                    development, strengthens cognitive skills, and makes learning meaningful and engaging for young
+                    children.
+                    Key findings from peer-reviewed research include:
                 </p>
 
                 <ul class="research-list">
                     <li>
-                        <strong>Play supports healthy brain development:</strong> Neuroscience and pediatric research
-                        show that play
-                        contributes to the formation of neural connections, enhances memory and attention, and promotes
-                        executive
-                        functions essential for learning.
+                        <strong>Play supports healthy brain development:</strong>
+                        Neuroscience and pediatric research show that play contributes to the formation of neural
+                        connections,
+                        enhances memory and attention, and supports executive functions essential for learning
+                        (<a href="https://publications.aap.org/pediatrics/article/119/1/182/70699/The-Importance-of-Play-in-Promoting-Healthy-Child"
+                            target="_blank" class="inline-citation">AAP Pediatrics</a>).
                     </li>
-                    <li>
-                        <strong>Play boosts cognitive and problem-solving skills:</strong> Research indicates that
-                        play-based
-                        learning
-                        enhances cognitive growth by encouraging exploration, experimentation, and active learning.
-                    </li>
-                    <li>
-                        <strong>Interactive formats enhance engagement:</strong> Studies on play and learning show that
-                        interactive,
-                        game-like experiences improve engagement and learning outcomes in young children.
-                    </li>
-                    <li>
-                        <strong>Play benefits social and emotional development:</strong> Research finds that play
-                        supports emotional
-                        regulation, collaboration, and social skills—important foundations for school readiness.
-                    </li>
-                    <li>
-                        <strong>Play reduces stress and supports overall well-being:</strong> Evidence suggests that
-                        playful
-                        learning
-                        reduces anxiety and creates positive environments where children thrive.
-                    </li>
-                </ul>
 
-                <p class="sources-title">Sources</p>
-                <ul class="sources-list">
-                    <li><a href="https://publications.aap.org/pediatrics/article/119/1/182/70699/The-Importance-of-Play-in-Promoting-Healthy-Child"
-                            target="_blank">American Academy of Pediatrics: Importance of Play in Child Development</a>
+                    <li>
+                        <strong>Play boosts cognitive and problem-solving skills:</strong>
+                        Research indicates that play-based learning encourages exploration, experimentation, and active
+                        learning,
+                        leading to stronger cognitive development
+                        (<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5646690/" target="_blank"
+                            class="inline-citation">Siviy et al.</a>).
                     </li>
-                    <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5646690/" target="_blank">Siviy et al.,
-                            Neurobiology of
-                            Play</a>
+
+                    <li>
+                        <strong>Interactive formats enhance engagement:</strong>
+                        Studies show that interactive, game-like learning experiences improve engagement and learning
+                        outcomes
+                        in young children
+                        (<a href="https://pubmed.ncbi.nlm.nih.gov/30273634/" target="_blank"
+                            class="inline-citation">Nijhof et al.</a>).
                     </li>
-                    <li><a href="https://www.researchgate.net/publication/394008291_Play-based_learning_and_cognitive_development_in_early_childhood_pedagogical_approaches_and_practical_implications"
-                            target="_blank">Play-Based Learning & Cognitive Development (Lazăr, 2025)</a>
+
+                    <li>
+                        <strong>Play supports social and emotional development:</strong>
+                        Play-based learning helps children develop emotional regulation, collaboration, and social
+                        skills —
+                        key foundations for school readiness
+                        (<a href="https://presidencyschoolnorth.org/the-role-of-play-based-learning-in-early-childhood-development/"
+                            target="_blank" class="inline-citation">Early Childhood Research</a>).
                     </li>
-                    <li><a href="https://presidencyschoolnorth.org/the-role-of-play-based-learning-in-early-childhood-development/"
-                            target="_blank">Benefits of Play-Based Learning in Early Childhood</a>
-                    </li>
-                    <li><a href="https://www.researchgate.net/publication/391000896_The_Role_of_Play_Based_Learning_in_Early_Childhood_Development"
-                            target="_blank">Role of Play in Child Development: Cognitive & Emotional Benefits</a>
-                    </li>
-                    <li><a href="https://pubmed.ncbi.nlm.nih.gov/30273634/" target="_blank">Nijhof et al., Importance of
-                            Play for
-                            Development</a>
+
+                    <li>
+                        <strong>Play reduces stress and supports well-being:</strong>
+                        Evidence suggests that playful learning environments reduce anxiety and help children feel safe,
+                        confident, and motivated to learn
+                        (<a href="https://www.researchgate.net/publication/391000896_The_Role_of_Play_Based_Learning_in_Early_Childhood_Development"
+                            target="_blank" class="inline-citation">Play & Development Studies</a>).
                     </li>
                 </ul>
 
